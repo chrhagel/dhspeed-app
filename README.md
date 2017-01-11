@@ -8,7 +8,7 @@ To make you go faster.
 
 ## Contributors
 
-@chr.hagel for questions. 
+@chrhagel for questions. 
 
 ## License
 
