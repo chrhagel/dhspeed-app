@@ -1,0 +1,819 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		750B494E1CB8192100B2A8A7 /* RunTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750B494D1CB8192100B2A8A7 /* RunTableViewCell.swift */; };
+		750BC88E1CAEF8E900C0524A /* BTDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 750BC88D1CAEF8E900C0524A /* BTDelegate.m */; };
+		750BC8921CAF1DD600C0524A /* SensorTagData.m in Sources */ = {isa = PBXBuildFile; fileRef = 750BC8911CAF1DD600C0524A /* SensorTagData.m */; };
+		750BC8941CB0384E00C0524A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 750BC8931CB0384E00C0524A /* libsqlite3.tbd */; };
+		750BC89B1CB17D4800C0524A /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 750BC89A1CB17D4800C0524A /* DBManager.m */; };
+		759F4CD01CB5D93900EC07D1 /* RunInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 759F4CCF1CB5D93900EC07D1 /* RunInfo.m */; };
+		75A7FBE81CB1F900006CCF28 /* RecordingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A7FBE71CB1F900006CCF28 /* RecordingHandler.swift */; };
+		75A7FBEA1CB5541F006CCF28 /* BikeTrax.rdb in Resources */ = {isa = PBXBuildFile; fileRef = 75A7FBE91CB5541F006CCF28 /* BikeTrax.rdb */; };
+		75CF75771CCA8CE300B0B47C /* LocationServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CF75761CCA8CE300B0B47C /* LocationServices.m */; };
+		75CF75791CCA8DFC00B0B47C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CF75781CCA8DFC00B0B47C /* CoreLocation.framework */; };
+		75CF757C1CCD80F600B0B47C /* collision.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 75CF757A1CCD80F600B0B47C /* collision.mp3 */; };
+		75CF757D1CCD80F600B0B47C /* subdive.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 75CF757B1CCD80F600B0B47C /* subdive.mp3 */; };
+		75CF757F1CCD81B400B0B47C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CF757E1CCD81B400B0B47C /* AudioToolbox.framework */; };
+		AABD2A3F1CB8817C005630E4 /* ExportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABD2A3E1CB8817C005630E4 /* ExportViewController.swift */; };
+		AF7752881CB6C34C00452B04 /* RunTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7752871CB6C34C00452B04 /* RunTableViewController.swift */; };
+		AFAAC1A11CAD95580009E097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAAC1A01CAD95580009E097 /* AppDelegate.swift */; };
+		AFAAC1A31CAD95580009E097 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAAC1A21CAD95580009E097 /* FirstViewController.swift */; };
+		AFAAC1A51CAD95580009E097 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAAC1A41CAD95580009E097 /* SecondViewController.swift */; };
+		AFAAC1A81CAD95580009E097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFAAC1A61CAD95580009E097 /* Main.storyboard */; };
+		AFAAC1AA1CAD95580009E097 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFAAC1A91CAD95580009E097 /* Assets.xcassets */; };
+		AFAAC1AD1CAD95580009E097 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFAAC1AB1CAD95580009E097 /* LaunchScreen.storyboard */; };
+		AFAAC1B81CAD95580009E097 /* BikeTraxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAAC1B71CAD95580009E097 /* BikeTraxTests.swift */; };
+		AFAAC1C31CAD95580009E097 /* BikeTraxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAAC1C21CAD95580009E097 /* BikeTraxUITests.swift */; };
+		AFAAC1D81CAD98C50009E097 /* DeviceSelectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAAC1D31CAD98C50009E097 /* DeviceSelectTableViewController.m */; };
+		AFAAC1D91CAD98C50009E097 /* bluetoothHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAAC1D71CAD98C50009E097 /* bluetoothHandler.m */; };
+		AFAAC1ED1CAD990B0009E097 /* sensorTagKeyService.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAAC1DC1CAD990B0009E097 /* sensorTagKeyService.m */; };
+		AFAAC1EE1CAD990B0009E097 /* deviceInformationService.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAAC1DE1CAD990B0009E097 /* deviceInformationService.m */; };
+		AFAAC1EF1CAD990B0009E097 /* sensorTagLightService.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAAC1E01CAD990B0009E097 /* sensorTagLightService.m */; };
+		AFAAC1F01CAD990B0009E097 /* bleGenericService.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAAC1E21CAD990B0009E097 /* bleGenericService.m */; };
+		AFAAC1F11CAD990B0009E097 /* sensorFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAAC1E41CAD990B0009E097 /* sensorFunctions.m */; };
+		AFAAC1F21CAD990B0009E097 /* sensorTagAmbientTemperatureService.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAAC1E61CAD990B0009E097 /* sensorTagAmbientTemperatureService.m */; };
+		AFAAC1F31CAD990B0009E097 /* sensorTagAirPressureService.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAAC1E81CAD990B0009E097 /* sensorTagAirPressureService.m */; };
+		AFAAC1F41CAD990B0009E097 /* sensorTagHumidityService.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAAC1EA1CAD990B0009E097 /* sensorTagHumidityService.m */; };
+		AFAAC1F51CAD990B0009E097 /* sensorTagMovementService.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAAC1EC1CAD990B0009E097 /* sensorTagMovementService.m */; };
+		AFAAC2411CADA4360009E097 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFAAC2401CADA4360009E097 /* CoreBluetooth.framework */; };
+		B94AAD607FFB3A753B692ECB /* Pods_BikeTrax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C57E7672E43304E6DA21544 /* Pods_BikeTrax.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFAAC1B41CAD95580009E097 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFAAC1951CAD95580009E097 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFAAC19C1CAD95580009E097;
+			remoteInfo = BikeTrax;
+		};
+		AFAAC1BF1CAD95580009E097 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFAAC1951CAD95580009E097 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFAAC19C1CAD95580009E097;
+			remoteInfo = BikeTrax;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4BC33B7A676CC45B6BB6B4EA /* Pods-BikeTrax.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeTrax.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BikeTrax/Pods-BikeTrax.debug.xcconfig"; sourceTree = "<group>"; };
+		5C57E7672E43304E6DA21544 /* Pods_BikeTrax.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeTrax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		750B494D1CB8192100B2A8A7 /* RunTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunTableViewCell.swift; sourceTree = "<group>"; };
+		750BC88C1CAEF8E900C0524A /* BTDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTDelegate.h; sourceTree = "<group>"; };
+		750BC88D1CAEF8E900C0524A /* BTDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTDelegate.m; sourceTree = "<group>"; };
+		750BC8901CAF1DD600C0524A /* SensorTagData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorTagData.h; sourceTree = "<group>"; };
+		750BC8911CAF1DD600C0524A /* SensorTagData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorTagData.m; sourceTree = "<group>"; };
+		750BC8931CB0384E00C0524A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		750BC8991CB17D4800C0524A /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		750BC89A1CB17D4800C0524A /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		759F4CCE1CB5D93900EC07D1 /* RunInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunInfo.h; sourceTree = "<group>"; };
+		759F4CCF1CB5D93900EC07D1 /* RunInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunInfo.m; sourceTree = "<group>"; };
+		75A7FBE71CB1F900006CCF28 /* RecordingHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingHandler.swift; sourceTree = "<group>"; };
+		75A7FBE91CB5541F006CCF28 /* BikeTrax.rdb */ = {isa = PBXFileReference; lastKnownFileType = file; path = BikeTrax.rdb; sourceTree = "<group>"; };
+		75CF75751CCA8CE300B0B47C /* LocationServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationServices.h; sourceTree = "<group>"; };
+		75CF75761CCA8CE300B0B47C /* LocationServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationServices.m; sourceTree = "<group>"; };
+		75CF75781CCA8DFC00B0B47C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		75CF757A1CCD80F600B0B47C /* collision.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = collision.mp3; sourceTree = "<group>"; };
+		75CF757B1CCD80F600B0B47C /* subdive.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = subdive.mp3; sourceTree = "<group>"; };
+		75CF757E1CCD81B400B0B47C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AABD2A3E1CB8817C005630E4 /* ExportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportViewController.swift; sourceTree = "<group>"; };
+		AEA48D6E446B3A5003BA9190 /* Pods-BikeTrax.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeTrax.release.xcconfig"; path = "Pods/Target Support Files/Pods-BikeTrax/Pods-BikeTrax.release.xcconfig"; sourceTree = "<group>"; };
+		AF7752871CB6C34C00452B04 /* RunTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunTableViewController.swift; sourceTree = "<group>"; };
+		AFAAC19D1CAD95580009E097 /* BikeTrax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeTrax.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFAAC1A01CAD95580009E097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AFAAC1A21CAD95580009E097 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		AFAAC1A41CAD95580009E097 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		AFAAC1A71CAD95580009E097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFAAC1A91CAD95580009E097 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AFAAC1AC1CAD95580009E097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AFAAC1AE1CAD95580009E097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFAAC1B31CAD95580009E097 /* BikeTraxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BikeTraxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFAAC1B71CAD95580009E097 /* BikeTraxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeTraxTests.swift; sourceTree = "<group>"; };
+		AFAAC1B91CAD95580009E097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFAAC1BE1CAD95580009E097 /* BikeTraxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BikeTraxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFAAC1C21CAD95580009E097 /* BikeTraxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeTraxUITests.swift; sourceTree = "<group>"; };
+		AFAAC1C41CAD95580009E097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFAAC1D21CAD98C40009E097 /* BikeTrax-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BikeTrax-Bridging-Header.h"; sourceTree = "<group>"; };
+		AFAAC1D31CAD98C50009E097 /* DeviceSelectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceSelectTableViewController.m; sourceTree = "<group>"; };
+		AFAAC1D41CAD98C50009E097 /* DeviceSelectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceSelectTableViewController.h; sourceTree = "<group>"; };
+		AFAAC1D51CAD98C50009E097 /* masterUUIDList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = masterUUIDList.h; sourceTree = "<group>"; };
+		AFAAC1D61CAD98C50009E097 /* bluetoothHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bluetoothHandler.h; sourceTree = "<group>"; };
+		AFAAC1D71CAD98C50009E097 /* bluetoothHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bluetoothHandler.m; sourceTree = "<group>"; };
+		AFAAC1DB1CAD990B0009E097 /* sensorTagKeyService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sensorTagKeyService.h; sourceTree = "<group>"; };
+		AFAAC1DC1CAD990B0009E097 /* sensorTagKeyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sensorTagKeyService.m; sourceTree = "<group>"; };
+		AFAAC1DD1CAD990B0009E097 /* deviceInformationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deviceInformationService.h; sourceTree = "<group>"; };
+		AFAAC1DE1CAD990B0009E097 /* deviceInformationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = deviceInformationService.m; sourceTree = "<group>"; };
+		AFAAC1DF1CAD990B0009E097 /* sensorTagLightService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sensorTagLightService.h; sourceTree = "<group>"; };
+		AFAAC1E01CAD990B0009E097 /* sensorTagLightService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sensorTagLightService.m; sourceTree = "<group>"; };
+		AFAAC1E11CAD990B0009E097 /* bleGenericService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bleGenericService.h; sourceTree = "<group>"; };
+		AFAAC1E21CAD990B0009E097 /* bleGenericService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bleGenericService.m; sourceTree = "<group>"; };
+		AFAAC1E31CAD990B0009E097 /* sensorFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sensorFunctions.h; sourceTree = "<group>"; };
+		AFAAC1E41CAD990B0009E097 /* sensorFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sensorFunctions.m; sourceTree = "<group>"; };
+		AFAAC1E51CAD990B0009E097 /* sensorTagAmbientTemperatureService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sensorTagAmbientTemperatureService.h; sourceTree = "<group>"; };
+		AFAAC1E61CAD990B0009E097 /* sensorTagAmbientTemperatureService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sensorTagAmbientTemperatureService.m; sourceTree = "<group>"; };
+		AFAAC1E71CAD990B0009E097 /* sensorTagAirPressureService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sensorTagAirPressureService.h; sourceTree = "<group>"; };
+		AFAAC1E81CAD990B0009E097 /* sensorTagAirPressureService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sensorTagAirPressureService.m; sourceTree = "<group>"; };
+		AFAAC1E91CAD990B0009E097 /* sensorTagHumidityService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sensorTagHumidityService.h; sourceTree = "<group>"; };
+		AFAAC1EA1CAD990B0009E097 /* sensorTagHumidityService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sensorTagHumidityService.m; sourceTree = "<group>"; };
+		AFAAC1EB1CAD990B0009E097 /* sensorTagMovementService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sensorTagMovementService.h; sourceTree = "<group>"; };
+		AFAAC1EC1CAD990B0009E097 /* sensorTagMovementService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sensorTagMovementService.m; sourceTree = "<group>"; };
+		AFAAC1F71CAD9B2B0009E097 /* masterMQTTResourceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = masterMQTTResourceList.h; sourceTree = "<group>"; };
+		AFAAC2401CADA4360009E097 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AFAAC19A1CAD95580009E097 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75CF757F1CCD81B400B0B47C /* AudioToolbox.framework in Frameworks */,
+				75CF75791CCA8DFC00B0B47C /* CoreLocation.framework in Frameworks */,
+				750BC8941CB0384E00C0524A /* libsqlite3.tbd in Frameworks */,
+				AFAAC2411CADA4360009E097 /* CoreBluetooth.framework in Frameworks */,
+				B94AAD607FFB3A753B692ECB /* Pods_BikeTrax.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFAAC1B01CAD95580009E097 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFAAC1BB1CAD95580009E097 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4DC134E2B1D564C6DD91E265 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4BC33B7A676CC45B6BB6B4EA /* Pods-BikeTrax.debug.xcconfig */,
+				AEA48D6E446B3A5003BA9190 /* Pods-BikeTrax.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		750BC8951CB038CE00C0524A /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				750BC8991CB17D4800C0524A /* DBManager.h */,
+				750BC89A1CB17D4800C0524A /* DBManager.m */,
+			);
+			name = Persistance;
+			sourceTree = "<group>";
+		};
+		75A7FBE41CB1F47D006CCF28 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				75CF757A1CCD80F600B0B47C /* collision.mp3 */,
+				75CF757B1CCD80F600B0B47C /* subdive.mp3 */,
+				75A7FBE91CB5541F006CCF28 /* BikeTrax.rdb */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		75CF75741CCA8CBF00B0B47C /* Location Services */ = {
+			isa = PBXGroup;
+			children = (
+				75CF75751CCA8CE300B0B47C /* LocationServices.h */,
+				75CF75761CCA8CE300B0B47C /* LocationServices.m */,
+			);
+			name = "Location Services";
+			sourceTree = "<group>";
+		};
+		AFAAC1941CAD95580009E097 = {
+			isa = PBXGroup;
+			children = (
+				75A7FBE41CB1F47D006CCF28 /* resources */,
+				750BC8931CB0384E00C0524A /* libsqlite3.tbd */,
+				AFAAC2401CADA4360009E097 /* CoreBluetooth.framework */,
+				AFAAC19F1CAD95580009E097 /* BikeTrax */,
+				AFAAC1B61CAD95580009E097 /* BikeTraxTests */,
+				AFAAC1C11CAD95580009E097 /* BikeTraxUITests */,
+				AFAAC19E1CAD95580009E097 /* Products */,
+				4DC134E2B1D564C6DD91E265 /* Pods */,
+				F330ECFFE83C72CB365FBBAD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AFAAC19E1CAD95580009E097 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AFAAC19D1CAD95580009E097 /* BikeTrax.app */,
+				AFAAC1B31CAD95580009E097 /* BikeTraxTests.xctest */,
+				AFAAC1BE1CAD95580009E097 /* BikeTraxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFAAC19F1CAD95580009E097 /* BikeTrax */ = {
+			isa = PBXGroup;
+			children = (
+				75CF75741CCA8CBF00B0B47C /* Location Services */,
+				AFAAC1D21CAD98C40009E097 /* BikeTrax-Bridging-Header.h */,
+				750BC8951CB038CE00C0524A /* Persistance */,
+				AFAAC1F61CAD9B140009E097 /* CloudConnector */,
+				AFAAC1D01CAD98400009E097 /* BLE */,
+				AFAAC1A01CAD95580009E097 /* AppDelegate.swift */,
+				AFAAC1A21CAD95580009E097 /* FirstViewController.swift */,
+				AFAAC1A41CAD95580009E097 /* SecondViewController.swift */,
+				75A7FBE71CB1F900006CCF28 /* RecordingHandler.swift */,
+				AF7752871CB6C34C00452B04 /* RunTableViewController.swift */,
+				750B494D1CB8192100B2A8A7 /* RunTableViewCell.swift */,
+				AFAAC1A61CAD95580009E097 /* Main.storyboard */,
+				AABD2A3E1CB8817C005630E4 /* ExportViewController.swift */,
+				AFAAC1A91CAD95580009E097 /* Assets.xcassets */,
+				AFAAC1AB1CAD95580009E097 /* LaunchScreen.storyboard */,
+				AFAAC1AE1CAD95580009E097 /* Info.plist */,
+			);
+			path = BikeTrax;
+			sourceTree = "<group>";
+		};
+		AFAAC1B61CAD95580009E097 /* BikeTraxTests */ = {
+			isa = PBXGroup;
+			children = (
+				AFAAC1B71CAD95580009E097 /* BikeTraxTests.swift */,
+				AFAAC1B91CAD95580009E097 /* Info.plist */,
+			);
+			path = BikeTraxTests;
+			sourceTree = "<group>";
+		};
+		AFAAC1C11CAD95580009E097 /* BikeTraxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AFAAC1C21CAD95580009E097 /* BikeTraxUITests.swift */,
+				AFAAC1C41CAD95580009E097 /* Info.plist */,
+			);
+			path = BikeTraxUITests;
+			sourceTree = "<group>";
+		};
+		AFAAC1D01CAD98400009E097 /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				AFAAC1DA1CAD98EB0009E097 /* BLE Services */,
+				AFAAC1D11CAD98860009E097 /* CoreBLE Handling */,
+			);
+			name = BLE;
+			sourceTree = "<group>";
+		};
+		AFAAC1D11CAD98860009E097 /* CoreBLE Handling */ = {
+			isa = PBXGroup;
+			children = (
+				AFAAC1D31CAD98C50009E097 /* DeviceSelectTableViewController.m */,
+				AFAAC1D41CAD98C50009E097 /* DeviceSelectTableViewController.h */,
+				AFAAC1D51CAD98C50009E097 /* masterUUIDList.h */,
+				AFAAC1D61CAD98C50009E097 /* bluetoothHandler.h */,
+				AFAAC1D71CAD98C50009E097 /* bluetoothHandler.m */,
+				750BC88C1CAEF8E900C0524A /* BTDelegate.h */,
+				750BC88D1CAEF8E900C0524A /* BTDelegate.m */,
+				750BC8901CAF1DD600C0524A /* SensorTagData.h */,
+				750BC8911CAF1DD600C0524A /* SensorTagData.m */,
+				759F4CCE1CB5D93900EC07D1 /* RunInfo.h */,
+				759F4CCF1CB5D93900EC07D1 /* RunInfo.m */,
+			);
+			name = "CoreBLE Handling";
+			sourceTree = "<group>";
+		};
+		AFAAC1DA1CAD98EB0009E097 /* BLE Services */ = {
+			isa = PBXGroup;
+			children = (
+				AFAAC1DB1CAD990B0009E097 /* sensorTagKeyService.h */,
+				AFAAC1DC1CAD990B0009E097 /* sensorTagKeyService.m */,
+				AFAAC1DD1CAD990B0009E097 /* deviceInformationService.h */,
+				AFAAC1DE1CAD990B0009E097 /* deviceInformationService.m */,
+				AFAAC1DF1CAD990B0009E097 /* sensorTagLightService.h */,
+				AFAAC1E01CAD990B0009E097 /* sensorTagLightService.m */,
+				AFAAC1E11CAD990B0009E097 /* bleGenericService.h */,
+				AFAAC1E21CAD990B0009E097 /* bleGenericService.m */,
+				AFAAC1E31CAD990B0009E097 /* sensorFunctions.h */,
+				AFAAC1E41CAD990B0009E097 /* sensorFunctions.m */,
+				AFAAC1E51CAD990B0009E097 /* sensorTagAmbientTemperatureService.h */,
+				AFAAC1E61CAD990B0009E097 /* sensorTagAmbientTemperatureService.m */,
+				AFAAC1E71CAD990B0009E097 /* sensorTagAirPressureService.h */,
+				AFAAC1E81CAD990B0009E097 /* sensorTagAirPressureService.m */,
+				AFAAC1E91CAD990B0009E097 /* sensorTagHumidityService.h */,
+				AFAAC1EA1CAD990B0009E097 /* sensorTagHumidityService.m */,
+				AFAAC1EB1CAD990B0009E097 /* sensorTagMovementService.h */,
+				AFAAC1EC1CAD990B0009E097 /* sensorTagMovementService.m */,
+			);
+			name = "BLE Services";
+			sourceTree = "<group>";
+		};
+		AFAAC1F61CAD9B140009E097 /* CloudConnector */ = {
+			isa = PBXGroup;
+			children = (
+				AFAAC1F71CAD9B2B0009E097 /* masterMQTTResourceList.h */,
+			);
+			name = CloudConnector;
+			sourceTree = "<group>";
+		};
+		F330ECFFE83C72CB365FBBAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75CF757E1CCD81B400B0B47C /* AudioToolbox.framework */,
+				75CF75781CCA8DFC00B0B47C /* CoreLocation.framework */,
+				5C57E7672E43304E6DA21544 /* Pods_BikeTrax.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AFAAC19C1CAD95580009E097 /* BikeTrax */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFAAC1C71CAD95580009E097 /* Build configuration list for PBXNativeTarget "BikeTrax" */;
+			buildPhases = (
+				7AD557CBE8720818B6E588D6 /* Check Pods Manifest.lock */,
+				AFAAC1991CAD95580009E097 /* Sources */,
+				AFAAC19A1CAD95580009E097 /* Frameworks */,
+				AFAAC19B1CAD95580009E097 /* Resources */,
+				54EAF2CB8F11EEC803840A8A /* Embed Pods Frameworks */,
+				A3E5044F936DB873F0AB712E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BikeTrax;
+			productName = BikeTrax;
+			productReference = AFAAC19D1CAD95580009E097 /* BikeTrax.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AFAAC1B21CAD95580009E097 /* BikeTraxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFAAC1CA1CAD95580009E097 /* Build configuration list for PBXNativeTarget "BikeTraxTests" */;
+			buildPhases = (
+				AFAAC1AF1CAD95580009E097 /* Sources */,
+				AFAAC1B01CAD95580009E097 /* Frameworks */,
+				AFAAC1B11CAD95580009E097 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFAAC1B51CAD95580009E097 /* PBXTargetDependency */,
+			);
+			name = BikeTraxTests;
+			productName = BikeTraxTests;
+			productReference = AFAAC1B31CAD95580009E097 /* BikeTraxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AFAAC1BD1CAD95580009E097 /* BikeTraxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFAAC1CD1CAD95580009E097 /* Build configuration list for PBXNativeTarget "BikeTraxUITests" */;
+			buildPhases = (
+				AFAAC1BA1CAD95580009E097 /* Sources */,
+				AFAAC1BB1CAD95580009E097 /* Frameworks */,
+				AFAAC1BC1CAD95580009E097 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFAAC1C01CAD95580009E097 /* PBXTargetDependency */,
+			);
+			name = BikeTraxUITests;
+			productName = BikeTraxUITests;
+			productReference = AFAAC1BE1CAD95580009E097 /* BikeTraxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFAAC1951CAD95580009E097 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Blair, Rick";
+				TargetAttributes = {
+					AFAAC19C1CAD95580009E097 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = X837QXBY4U;
+						LastSwiftMigration = 0810;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					AFAAC1B21CAD95580009E097 = {
+						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0810;
+						TestTargetID = AFAAC19C1CAD95580009E097;
+					};
+					AFAAC1BD1CAD95580009E097 = {
+						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0810;
+						TestTargetID = AFAAC19C1CAD95580009E097;
+					};
+				};
+			};
+			buildConfigurationList = AFAAC1981CAD95580009E097 /* Build configuration list for PBXProject "BikeTrax" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AFAAC1941CAD95580009E097;
+			productRefGroup = AFAAC19E1CAD95580009E097 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AFAAC19C1CAD95580009E097 /* BikeTrax */,
+				AFAAC1B21CAD95580009E097 /* BikeTraxTests */,
+				AFAAC1BD1CAD95580009E097 /* BikeTraxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AFAAC19B1CAD95580009E097 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A7FBEA1CB5541F006CCF28 /* BikeTrax.rdb in Resources */,
+				75CF757D1CCD80F600B0B47C /* subdive.mp3 in Resources */,
+				AFAAC1AD1CAD95580009E097 /* LaunchScreen.storyboard in Resources */,
+				AFAAC1AA1CAD95580009E097 /* Assets.xcassets in Resources */,
+				75CF757C1CCD80F600B0B47C /* collision.mp3 in Resources */,
+				AFAAC1A81CAD95580009E097 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFAAC1B11CAD95580009E097 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFAAC1BC1CAD95580009E097 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54EAF2CB8F11EEC803840A8A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeTrax/Pods-BikeTrax-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AD557CBE8720818B6E588D6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A3E5044F936DB873F0AB712E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeTrax/Pods-BikeTrax-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AFAAC1991CAD95580009E097 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFAAC1F31CAD990B0009E097 /* sensorTagAirPressureService.m in Sources */,
+				AFAAC1ED1CAD990B0009E097 /* sensorTagKeyService.m in Sources */,
+				AFAAC1EF1CAD990B0009E097 /* sensorTagLightService.m in Sources */,
+				AF7752881CB6C34C00452B04 /* RunTableViewController.swift in Sources */,
+				AFAAC1F41CAD990B0009E097 /* sensorTagHumidityService.m in Sources */,
+				75CF75771CCA8CE300B0B47C /* LocationServices.m in Sources */,
+				75A7FBE81CB1F900006CCF28 /* RecordingHandler.swift in Sources */,
+				750BC89B1CB17D4800C0524A /* DBManager.m in Sources */,
+				AFAAC1A51CAD95580009E097 /* SecondViewController.swift in Sources */,
+				AFAAC1F11CAD990B0009E097 /* sensorFunctions.m in Sources */,
+				750B494E1CB8192100B2A8A7 /* RunTableViewCell.swift in Sources */,
+				AFAAC1D81CAD98C50009E097 /* DeviceSelectTableViewController.m in Sources */,
+				AFAAC1EE1CAD990B0009E097 /* deviceInformationService.m in Sources */,
+				AFAAC1A11CAD95580009E097 /* AppDelegate.swift in Sources */,
+				AFAAC1D91CAD98C50009E097 /* bluetoothHandler.m in Sources */,
+				AABD2A3F1CB8817C005630E4 /* ExportViewController.swift in Sources */,
+				750BC8921CAF1DD600C0524A /* SensorTagData.m in Sources */,
+				AFAAC1F21CAD990B0009E097 /* sensorTagAmbientTemperatureService.m in Sources */,
+				AFAAC1F51CAD990B0009E097 /* sensorTagMovementService.m in Sources */,
+				750BC88E1CAEF8E900C0524A /* BTDelegate.m in Sources */,
+				AFAAC1F01CAD990B0009E097 /* bleGenericService.m in Sources */,
+				759F4CD01CB5D93900EC07D1 /* RunInfo.m in Sources */,
+				AFAAC1A31CAD95580009E097 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFAAC1AF1CAD95580009E097 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFAAC1B81CAD95580009E097 /* BikeTraxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFAAC1BA1CAD95580009E097 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFAAC1C31CAD95580009E097 /* BikeTraxUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFAAC1B51CAD95580009E097 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFAAC19C1CAD95580009E097 /* BikeTrax */;
+			targetProxy = AFAAC1B41CAD95580009E097 /* PBXContainerItemProxy */;
+		};
+		AFAAC1C01CAD95580009E097 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFAAC19C1CAD95580009E097 /* BikeTrax */;
+			targetProxy = AFAAC1BF1CAD95580009E097 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AFAAC1A61CAD95580009E097 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFAAC1A71CAD95580009E097 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AFAAC1AB1CAD95580009E097 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFAAC1AC1CAD95580009E097 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AFAAC1C51CAD95580009E097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AFAAC1C61CAD95580009E097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AFAAC1C81CAD95580009E097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BC33B7A676CC45B6BB6B4EA /* Pods-BikeTrax.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = BikeTrax/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fatechnologies.BikeTrax;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BikeTrax/BikeTrax-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AFAAC1C91CAD95580009E097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEA48D6E446B3A5003BA9190 /* Pods-BikeTrax.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = BikeTrax/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fatechnologies.BikeTrax;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BikeTrax/BikeTrax-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		AFAAC1CB1CAD95580009E097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BikeTraxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.honeywell.acs.bmi.BikeTraxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BikeTrax.app/BikeTrax";
+			};
+			name = Debug;
+		};
+		AFAAC1CC1CAD95580009E097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BikeTraxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.honeywell.acs.bmi.BikeTraxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BikeTrax.app/BikeTrax";
+			};
+			name = Release;
+		};
+		AFAAC1CE1CAD95580009E097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BikeTraxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.honeywell.acs.bmi.BikeTraxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = BikeTrax;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		AFAAC1CF1CAD95580009E097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BikeTraxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.honeywell.acs.bmi.BikeTraxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = BikeTrax;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AFAAC1981CAD95580009E097 /* Build configuration list for PBXProject "BikeTrax" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFAAC1C51CAD95580009E097 /* Debug */,
+				AFAAC1C61CAD95580009E097 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFAAC1C71CAD95580009E097 /* Build configuration list for PBXNativeTarget "BikeTrax" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFAAC1C81CAD95580009E097 /* Debug */,
+				AFAAC1C91CAD95580009E097 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFAAC1CA1CAD95580009E097 /* Build configuration list for PBXNativeTarget "BikeTraxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFAAC1CB1CAD95580009E097 /* Debug */,
+				AFAAC1CC1CAD95580009E097 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFAAC1CD1CAD95580009E097 /* Build configuration list for PBXNativeTarget "BikeTraxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFAAC1CE1CAD95580009E097 /* Debug */,
+				AFAAC1CF1CAD95580009E097 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AFAAC1951CAD95580009E097 /* Project object */;
+}
