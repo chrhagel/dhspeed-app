@@ -68,7 +68,7 @@ static dispatch_once_t onceToken;
 - (void)locationManager:(CLLocationManager *)manager
      didUpdateLocations:(NSArray<CLLocation *> *)locations
 {
-    NSLog(@"Got %lu locations",(unsigned long)locations.count);
+   
     _currentLoc = locations[locations.count -1];
 }
 

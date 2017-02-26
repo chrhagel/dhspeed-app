@@ -17,6 +17,8 @@ class FirstViewController: UIViewController, ButtonProtocol, UITextFieldDelegate
     var currentlyRecording = "straight"
     var currentSwitch: UISwitch!
     var isRecording: Bool = false
+    
+    let motion = MotionServices.sharedInstance();
 
     @IBOutlet weak var runNameText: UITextField!
     
@@ -44,6 +46,7 @@ class FirstViewController: UIViewController, ButtonProtocol, UITextFieldDelegate
         self.view.addSubview((blueTooth?.deviceSelect.tableView)!)
         
         blueTooth?.buttonDelegate = self;
+        isRecording = false;
        
     }
 
@@ -53,7 +56,20 @@ class FirstViewController: UIViewController, ButtonProtocol, UITextFieldDelegate
         return false
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated);
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(FirstViewController.RecordingHandler), name: NSNotification.Name(rawValue: kSlapNotification), object: nil)
+        motion?.startUpdating();
+    }
     
+    func toggleRecording()
+    {
+        DispatchQueue.main.async{
+            
+            self.RecordingHandler()
+        }
+    }
 //MARK: Recording *****************************************
     func RecordingHandler() {
         

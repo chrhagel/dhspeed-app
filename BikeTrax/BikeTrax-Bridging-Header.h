@@ -14,3 +14,4 @@
 #import "BTDelegate.h"
 #import "SensorTagData.h"
 #import "RunInfo.h"
+#import "MotionServices.h"

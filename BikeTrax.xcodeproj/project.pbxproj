@@ -12,6 +12,7 @@
 		750BC8921CAF1DD600C0524A /* SensorTagData.m in Sources */ = {isa = PBXBuildFile; fileRef = 750BC8911CAF1DD600C0524A /* SensorTagData.m */; };
 		750BC8941CB0384E00C0524A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 750BC8931CB0384E00C0524A /* libsqlite3.tbd */; };
 		750BC89B1CB17D4800C0524A /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 750BC89A1CB17D4800C0524A /* DBManager.m */; };
+		7584A0361E634F6700D1EEC0 /* MotionServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 7584A0351E634F6700D1EEC0 /* MotionServices.m */; };
 		759F4CD01CB5D93900EC07D1 /* RunInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 759F4CCF1CB5D93900EC07D1 /* RunInfo.m */; };
 		75A7FBE81CB1F900006CCF28 /* RecordingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A7FBE71CB1F900006CCF28 /* RecordingHandler.swift */; };
 		75A7FBEA1CB5541F006CCF28 /* BikeTrax.rdb in Resources */ = {isa = PBXBuildFile; fileRef = 75A7FBE91CB5541F006CCF28 /* BikeTrax.rdb */; };
@@ -42,7 +43,6 @@
 		AFAAC1F41CAD990B0009E097 /* sensorTagHumidityService.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAAC1EA1CAD990B0009E097 /* sensorTagHumidityService.m */; };
 		AFAAC1F51CAD990B0009E097 /* sensorTagMovementService.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAAC1EC1CAD990B0009E097 /* sensorTagMovementService.m */; };
 		AFAAC2411CADA4360009E097 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFAAC2401CADA4360009E097 /* CoreBluetooth.framework */; };
-		B94AAD607FFB3A753B692ECB /* Pods_BikeTrax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C57E7672E43304E6DA21544 /* Pods_BikeTrax.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +63,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4BC33B7A676CC45B6BB6B4EA /* Pods-BikeTrax.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeTrax.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BikeTrax/Pods-BikeTrax.debug.xcconfig"; sourceTree = "<group>"; };
-		5C57E7672E43304E6DA21544 /* Pods_BikeTrax.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeTrax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		750B494D1CB8192100B2A8A7 /* RunTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunTableViewCell.swift; sourceTree = "<group>"; };
 		750BC88C1CAEF8E900C0524A /* BTDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTDelegate.h; sourceTree = "<group>"; };
 		750BC88D1CAEF8E900C0524A /* BTDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTDelegate.m; sourceTree = "<group>"; };
@@ -73,6 +71,8 @@
 		750BC8931CB0384E00C0524A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		750BC8991CB17D4800C0524A /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		750BC89A1CB17D4800C0524A /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		7584A0341E634F6700D1EEC0 /* MotionServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionServices.h; sourceTree = "<group>"; };
+		7584A0351E634F6700D1EEC0 /* MotionServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionServices.m; sourceTree = "<group>"; };
 		759F4CCE1CB5D93900EC07D1 /* RunInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunInfo.h; sourceTree = "<group>"; };
 		759F4CCF1CB5D93900EC07D1 /* RunInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunInfo.m; sourceTree = "<group>"; };
 		75A7FBE71CB1F900006CCF28 /* RecordingHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingHandler.swift; sourceTree = "<group>"; };
@@ -84,7 +84,6 @@
 		75CF757B1CCD80F600B0B47C /* subdive.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = subdive.mp3; sourceTree = "<group>"; };
 		75CF757E1CCD81B400B0B47C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		AABD2A3E1CB8817C005630E4 /* ExportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportViewController.swift; sourceTree = "<group>"; };
-		AEA48D6E446B3A5003BA9190 /* Pods-BikeTrax.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeTrax.release.xcconfig"; path = "Pods/Target Support Files/Pods-BikeTrax/Pods-BikeTrax.release.xcconfig"; sourceTree = "<group>"; };
 		AF7752871CB6C34C00452B04 /* RunTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunTableViewController.swift; sourceTree = "<group>"; };
 		AFAAC19D1CAD95580009E097 /* BikeTrax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeTrax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFAAC1A01CAD95580009E097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,7 +136,6 @@
 				75CF75791CCA8DFC00B0B47C /* CoreLocation.framework in Frameworks */,
 				750BC8941CB0384E00C0524A /* libsqlite3.tbd in Frameworks */,
 				AFAAC2411CADA4360009E097 /* CoreBluetooth.framework in Frameworks */,
-				B94AAD607FFB3A753B692ECB /* Pods_BikeTrax.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,15 +156,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4DC134E2B1D564C6DD91E265 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4BC33B7A676CC45B6BB6B4EA /* Pods-BikeTrax.debug.xcconfig */,
-				AEA48D6E446B3A5003BA9190 /* Pods-BikeTrax.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		750BC8951CB038CE00C0524A /* Persistance */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +180,8 @@
 			children = (
 				75CF75751CCA8CE300B0B47C /* LocationServices.h */,
 				75CF75761CCA8CE300B0B47C /* LocationServices.m */,
+				7584A0341E634F6700D1EEC0 /* MotionServices.h */,
+				7584A0351E634F6700D1EEC0 /* MotionServices.m */,
 			);
 			name = "Location Services";
 			sourceTree = "<group>";
@@ -205,8 +196,8 @@
 				AFAAC1B61CAD95580009E097 /* BikeTraxTests */,
 				AFAAC1C11CAD95580009E097 /* BikeTraxUITests */,
 				AFAAC19E1CAD95580009E097 /* Products */,
-				4DC134E2B1D564C6DD91E265 /* Pods */,
 				F330ECFFE83C72CB365FBBAD /* Frameworks */,
+				D7B37A6324D8CA260C869480 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -321,12 +312,18 @@
 			name = CloudConnector;
 			sourceTree = "<group>";
 		};
+		D7B37A6324D8CA260C869480 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F330ECFFE83C72CB365FBBAD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				75CF757E1CCD81B400B0B47C /* AudioToolbox.framework */,
 				75CF75781CCA8DFC00B0B47C /* CoreLocation.framework */,
-				5C57E7672E43304E6DA21544 /* Pods_BikeTrax.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -338,12 +335,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFAAC1C71CAD95580009E097 /* Build configuration list for PBXNativeTarget "BikeTrax" */;
 			buildPhases = (
-				7AD557CBE8720818B6E588D6 /* Check Pods Manifest.lock */,
 				AFAAC1991CAD95580009E097 /* Sources */,
 				AFAAC19A1CAD95580009E097 /* Frameworks */,
 				AFAAC19B1CAD95580009E097 /* Resources */,
-				54EAF2CB8F11EEC803840A8A /* Embed Pods Frameworks */,
-				A3E5044F936DB873F0AB712E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -358,9 +352,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFAAC1CA1CAD95580009E097 /* Build configuration list for PBXNativeTarget "BikeTraxTests" */;
 			buildPhases = (
+				CCE7C28EB83C8D84496D03FC /* [CP] Check Pods Manifest.lock */,
 				AFAAC1AF1CAD95580009E097 /* Sources */,
 				AFAAC1B01CAD95580009E097 /* Frameworks */,
 				AFAAC1B11CAD95580009E097 /* Resources */,
+				A2EF17C4CDE7274EC1096DE5 /* [CP] Embed Pods Frameworks */,
+				32F4A192EFFFCEC84CDB2E2C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -376,9 +373,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFAAC1CD1CAD95580009E097 /* Build configuration list for PBXNativeTarget "BikeTraxUITests" */;
 			buildPhases = (
+				DDEF01568BAAF28F565573F2 /* [CP] Check Pods Manifest.lock */,
 				AFAAC1BA1CAD95580009E097 /* Sources */,
 				AFAAC1BB1CAD95580009E097 /* Frameworks */,
 				AFAAC1BC1CAD95580009E097 /* Resources */,
+				DF2D27D34BD705129A839369 /* [CP] Embed Pods Frameworks */,
+				74EDBDD7C84F38A62ABFC547 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -402,7 +402,7 @@
 				TargetAttributes = {
 					AFAAC19C1CAD95580009E097 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = X837QXBY4U;
+						DevelopmentTeam = MN7MKJSUY6;
 						LastSwiftMigration = 0810;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -473,49 +473,94 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		54EAF2CB8F11EEC803840A8A /* Embed Pods Frameworks */ = {
+		32F4A192EFFFCEC84CDB2E2C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeTrax/Pods-BikeTrax-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeTraxTests/Pods-BikeTraxTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7AD557CBE8720818B6E588D6 /* Check Pods Manifest.lock */ = {
+		74EDBDD7C84F38A62ABFC547 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeTraxUITests/Pods-BikeTraxUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A3E5044F936DB873F0AB712E /* Copy Pods Resources */ = {
+		A2EF17C4CDE7274EC1096DE5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeTrax/Pods-BikeTrax-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeTraxTests/Pods-BikeTraxTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCE7C28EB83C8D84496D03FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DDEF01568BAAF28F565573F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DF2D27D34BD705129A839369 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeTraxUITests/Pods-BikeTraxUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -546,6 +591,7 @@
 				AFAAC1F51CAD990B0009E097 /* sensorTagMovementService.m in Sources */,
 				750BC88E1CAEF8E900C0524A /* BTDelegate.m in Sources */,
 				AFAAC1F01CAD990B0009E097 /* bleGenericService.m in Sources */,
+				7584A0361E634F6700D1EEC0 /* MotionServices.m in Sources */,
 				759F4CD01CB5D93900EC07D1 /* RunInfo.m in Sources */,
 				AFAAC1A31CAD95580009E097 /* FirstViewController.swift in Sources */,
 			);
@@ -685,12 +731,12 @@
 		};
 		AFAAC1C81CAD95580009E097 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BC33B7A676CC45B6BB6B4EA /* Pods-BikeTrax.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = MN7MKJSUY6;
 				INFOPLIST_FILE = BikeTrax/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -705,12 +751,12 @@
 		};
 		AFAAC1C91CAD95580009E097 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AEA48D6E446B3A5003BA9190 /* Pods-BikeTrax.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = MN7MKJSUY6;
 				INFOPLIST_FILE = BikeTrax/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
