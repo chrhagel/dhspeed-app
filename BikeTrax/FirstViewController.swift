@@ -59,7 +59,7 @@ class FirstViewController: UIViewController, ButtonProtocol, UITextFieldDelegate
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
         
-        NotificationCenter.default.addObserver(self, selector: #selector(FirstViewController.RecordingHandler), name: NSNotification.Name(rawValue: kSlapNotification), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(FirstViewController.SlapHandler), name: NSNotification.Name(rawValue: kSlapNotification), object: nil)
         motion?.startUpdating();
     }
     
@@ -70,9 +70,22 @@ class FirstViewController: UIViewController, ButtonProtocol, UITextFieldDelegate
             self.RecordingHandler()
         }
     }
+    //MARK SlapHandler
+    func SlapHandler ()
+    {
+        if (isRecording)
+        {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                self.RecordingHandler();
+            }
+        }
+        else{
+           RecordingHandler();
+        }
+    }
 //MARK: Recording *****************************************
     func RecordingHandler() {
-        
+        print("RECORD: %d", isRecording);
         if (isRecording){
             isRecording = false
             record_btn.setTitle("Record", for: UIControlState())
