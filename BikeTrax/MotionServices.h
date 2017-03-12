@@ -10,8 +10,10 @@
 #define kSlapNotification @"MotionServicesSlapNotification"
 
 @interface MotionServices : NSObject
+@property (assign) float threshold;
 
 -(void)startUpdating;
 -(void)stopUpdating;
+
 +(MotionServices *)sharedInstance;
 @end

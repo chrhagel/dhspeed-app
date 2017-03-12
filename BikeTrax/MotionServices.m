@@ -18,6 +18,7 @@
 @property  (strong, nonatomic) NSString *direction;
 @property (assign) NSTimeInterval oldTime;
 @property (assign) NSTimeInterval lastTime;
+
 -(void) addAccelData:(CMAcceleration)accel;
 -(bool) didSlap:(CMAccelerometerData*)accelData;
 
@@ -51,9 +52,11 @@ static dispatch_once_t onceToken;
         _oldZ = 0.0;
         _oldTime  = 0.0;
         _lastTime = 0.0;
+        _threshold = 1.0;
     }
     return self;
 }
+
 
 
 //LowPass Filter
@@ -71,6 +74,7 @@ static dispatch_once_t onceToken;
         if(_motionManager == nil)
         {
             self.motionManager = [[CMMotionManager alloc] init];
+           // self.motionManager.accelerometerUpdateInterval = .1;
         }
     NSLog(@"Start Updating for SLAP ***************");
     [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue]
@@ -91,15 +95,20 @@ static dispatch_once_t onceToken;
 - (bool) didSlap:(CMAccelerometerData *)accelData
 {
     bool rval = NO;
+    if(_threshold == 0)
+    {
+        return rval;
+    }
     CMAcceleration accel = accelData.acceleration;
     [self addAccelData:accel];
     
     float z = _oldZ;
     float ot = _oldTime;
-    float thresh = 1.0;
+    float thresh = _threshold;
+   // NSLog(@"**** THRESHOLD: %f",_threshold);
     if((z < -thresh) || (z > thresh))
     {
-        NSLog(@"Something Happened on Z");
+      //  NSLog(@"Something Happened on Z");
     }
     
     if(z < -thresh)
@@ -113,7 +122,7 @@ static dispatch_once_t onceToken;
                 [[NSNotificationCenter defaultCenter]
                  postNotificationName:kSlapNotification
                  object:self];
-                NSLog(@"@@@ _lastTime -1 %f ",accelData.timestamp - ot);
+               // NSLog(@"@@@ _lastTime -1 %f ",accelData.timestamp - ot);
             }
         }
     }
@@ -129,7 +138,7 @@ static dispatch_once_t onceToken;
                 [[NSNotificationCenter defaultCenter]
                  postNotificationName:kSlapNotification
                  object:self];
-                 NSLog(@"### _lastTime 1 %f ",accelData.timestamp - ot);
+               //  NSLog(@"### _lastTime 1 %f ",accelData.timestamp - ot);
             }
             
         }

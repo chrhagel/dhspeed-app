@@ -29,9 +29,12 @@ class FirstViewController: UIViewController, ButtonProtocol, UITextFieldDelegate
     @IBOutlet weak var sitdown_switch: UISwitch!
     @IBOutlet weak var slalom_switch: UISwitch!
     
+    @IBOutlet var valueLabel: UILabel!
+  
     
     @IBOutlet weak var record_btn: UIButton!
     
+    @IBOutlet var zslider: UISlider!
 
     @IBOutlet weak var output_textview: UITextView!
     
@@ -61,6 +64,9 @@ class FirstViewController: UIViewController, ButtonProtocol, UITextFieldDelegate
         super.viewWillAppear(animated);
         
         NotificationCenter.default.addObserver(self, selector: #selector(FirstViewController.SlapHandler), name: NSNotification.Name(rawValue: kSlapNotification), object: nil)
+        let s = NSString(format: "%1.2f", (motion?.threshold)!)
+        valueLabel.text = s as String
+
         motion?.startUpdating();
     }
     
@@ -71,6 +77,15 @@ class FirstViewController: UIViewController, ButtonProtocol, UITextFieldDelegate
             self.RecordingHandler()
         }
     }
+    
+    @IBAction func sliderChanged(_ sender: Any) {
+        
+        let val = zslider.value;
+        let s = NSString(format: "%1.2f", val)
+        valueLabel.text = s as String
+        motion?.threshold = zslider.value
+    }
+    
     //MARK SlapHandler
     func SlapHandler ()
     {
