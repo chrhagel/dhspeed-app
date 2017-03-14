@@ -17,6 +17,7 @@ class FirstViewController: UIViewController, ButtonProtocol, UITextFieldDelegate
     var currentlyRecording = "straight"
     var currentSwitch: UISwitch!
     var isRecording: Bool = false
+    var isCountingDown: Bool = false
     
     let motion = MotionServices.sharedInstance();
 
@@ -89,13 +90,21 @@ class FirstViewController: UIViewController, ButtonProtocol, UITextFieldDelegate
     //MARK SlapHandler
     func SlapHandler ()
     {
+           
         if (isRecording)
         {
+            if(isCountingDown)
+            {
+                //punt
+                return
+            }
+            isCountingDown = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                 self.RecordingHandler();
             }
         }
-        else{
+        else
+        {
             RecordingHandler();
         }
     }
@@ -104,6 +113,7 @@ class FirstViewController: UIViewController, ButtonProtocol, UITextFieldDelegate
         
         if (isRecording){
             isRecording = false
+            isCountingDown = false
             record_btn.setTitle("Record", for: UIControlState())
             //TODO:change background color to green. maybe via an image.
             
@@ -115,6 +125,7 @@ class FirstViewController: UIViewController, ButtonProtocol, UITextFieldDelegate
         } else {
             isRecording = true
             record_btn.setTitle("Stop Recording", for: UIControlState())
+            
             //TODO:change background color to red. maybe via an image.
             
             

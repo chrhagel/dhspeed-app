@@ -53,6 +53,8 @@ static dispatch_once_t onceToken;
         _oldTime  = 0.0;
         _lastTime = 0.0;
         _threshold = 1.0;
+        _minZ = 0.0;
+        _maxZ = 0.0;
     }
     return self;
 }
@@ -67,6 +69,15 @@ static dispatch_once_t onceToken;
     _oldY = accel.y - ((accel.y * alpha) + (_oldY *(1.0 - alpha)));
     _oldZ = accel.z - ((accel.z * alpha) + (_oldZ *(1.0 - alpha)));
     
+    if(_oldZ < _minZ)
+    {
+        _minZ = _oldZ;
+    }
+    else if(_oldZ > _maxZ)
+    {
+        _maxZ = _oldZ;
+    }
+    
 }
 
 -(void) startUpdating
@@ -76,7 +87,11 @@ static dispatch_once_t onceToken;
             self.motionManager = [[CMMotionManager alloc] init];
            // self.motionManager.accelerometerUpdateInterval = .1;
         }
-    NSLog(@"Start Updating for SLAP ***************");
+    else
+    {
+        [self stopUpdating];
+    }
+    NSLog(@"Start Updating for SLAP *************** ");
     [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue]
                                              withHandler:^(CMAccelerometerData *accelerometerData, NSError *error) {
                                                  [self didSlap:accelerometerData];
@@ -95,10 +110,12 @@ static dispatch_once_t onceToken;
 - (bool) didSlap:(CMAccelerometerData *)accelData
 {
     bool rval = NO;
-    if(_threshold == 0)
+    if(_threshold < 0.1)
     {
+        NSLog(@"***** Skipping Check");
         return rval;
     }
+    
     CMAcceleration accel = accelData.acceleration;
     [self addAccelData:accel];
     
@@ -108,7 +125,7 @@ static dispatch_once_t onceToken;
    // NSLog(@"**** THRESHOLD: %f",_threshold);
     if((z < -thresh) || (z > thresh))
     {
-      //  NSLog(@"Something Happened on Z");
+       NSLog(@"min:max %f:%f %f %f",_minZ,_maxZ, z, thresh);
     }
     
     if(z < -thresh)

@@ -10,7 +10,9 @@
 #define kSlapNotification @"MotionServicesSlapNotification"
 
 @interface MotionServices : NSObject
-@property (assign) float threshold;
+@property (assign, atomic) float threshold;
+@property (assign, nonatomic) float minZ;
+@property (assign, nonatomic) float maxZ;
 
 -(void)startUpdating;
 -(void)stopUpdating;
