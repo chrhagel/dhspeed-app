@@ -90,23 +90,23 @@ class FirstViewController: UIViewController, ButtonProtocol, UITextFieldDelegate
     //MARK SlapHandler
     func SlapHandler ()
     {
-           
-        if (isRecording)
-        {
-            if(isCountingDown)
-            {
+      
+  //      if (isRecording)
+   //     {
+  //          if(isCountingDown)
+   //         {
                 //punt
-                return
-            }
-            isCountingDown = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                self.RecordingHandler();
-            }
-        }
-        else
-        {
+   //             return
+   //         }
+    //        isCountingDown = true
+    //        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+     //           self.RecordingHandler();
+      //      }
+      //  }
+      //  else
+      //  {
             RecordingHandler();
-        }
+       // }
     }
 //MARK: Recording *****************************************
     func RecordingHandler() {
